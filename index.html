@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <style>
+        body {
+            background-color: #e9ecef; /* Light gray background */
+            color: #495057; /* Dark gray text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px; /* Increase max-width */
+            margin: 50px auto; /* Center and add top margin */
+            padding: 30px; /* Increase padding */
+            background-color: #ffffff; /* White background */
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h1 {
+            color: #343a40; /* Dark gray heading text */
+            font-size: 1.75rem; /* Slightly larger font size */
+            text-align: center; /* Center align the heading */
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600; /* Bold labels */
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px; /* Padding for inputs */
+            margin: 5px 10px 15px; /* Margin adjustments */
+            box-sizing: border-box;
+            border: 1px solid #ced4da; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Blue submit button */
+            color: #fff; /* White text */
+            border: none;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px; /* Padding adjustments */
+            text-align: left;
+            border-bottom: 1px solid #dee2e6; /* Light gray border */
+        }
+
+        th {
+            background-color: #f8f9fa; /* Light gray header background */
+            font-weight: 600; /* Bold header text */
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1; /* Light gray row highlight on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Save and View User Data</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age">
+        
+        <label for="height">Height:</label>
+        <input type="text" name="height" id="height">
+        
+        <label for="weight">Weight:</label>
+        <input type="text" name="weight" id="weight">
+        
+        <input type="submit" id="saveuser" value="Save User Data">
+        <p id="userSaved"></p>
+        
+        <input type="submit" id="getusers" value="View All Users">
+        
+        <div id="showUsers">
+            <table id="userTable">
+                <colgroup>
+                    <col style="width:25%"> <!-- Adjust column width -->
+                    <col style="width:25%">
+                    <col style="width:25%">
+                    <col style="width:25%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
